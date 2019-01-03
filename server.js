@@ -64,6 +64,14 @@ app.get('/about' , (req , res)=>{
  });
 });
 
+
+app.get('/projects' , (req , res)=>{
+ res.render('projects.hbs' , {
+   pageTitle: 'Projects',
+   portfolioMessage: "This is my portfolio"
+ });
+})
+
 app.get('*' , (req , res)=>{
  res.send({
    errorMessage: "The Page Is Not Found"
